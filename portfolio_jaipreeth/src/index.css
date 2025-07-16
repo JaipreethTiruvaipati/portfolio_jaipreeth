@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Isha Foundation inspired natural color palette */
+    --background: 46 21% 96%;
+    --foreground: 30 15% 15%;
+
+    --card: 120 18% 95%;
+    --card-foreground: 30 15% 15%;
+
+    --popover: 120 18% 95%;
+    --popover-foreground: 30 15% 15%;
+
+    --primary: 76 39% 24%;
+    --primary-foreground: 46 21% 96%;
+
+    --secondary: 82 26% 85%;
+    --secondary-foreground: 30 15% 15%;
+
+    --muted: 82 26% 90%;
+    --muted-foreground: 30 8% 45%;
+
+    --accent: 45 93% 47%;
+    --accent-foreground: 46 21% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 46 21% 96%;
+
+    --border: 82 26% 85%;
+    --input: 82 26% 85%;
+    --ring: 76 39% 24%;
+
+    /* Enhanced radius for spiritual feel */
+    --radius: 1rem;
+
+    /* Sacred geometry and meditation inspired gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(76 39% 24%), hsl(45 93% 47%));
+    --gradient-peaceful: linear-gradient(180deg, hsl(120 18% 95%), hsl(82 26% 90%));
+    --gradient-sacred: radial-gradient(circle, hsl(45 93% 47% / 0.1), transparent);
+
+    /* Shadows with natural feel */
+    --shadow-sacred: 0 10px 30px -10px hsl(76 39% 24% / 0.3);
+    --shadow-glow: 0 0 40px hsl(45 93% 47% / 0.4);
+
+    /* Smooth transitions */
+    --transition-sacred: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with natural night colors */
+    --background: 215 28% 8%;
+    --foreground: 82 26% 85%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 82 26% 85%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 82 26% 85%;
+
+    --primary: 45 93% 55%;
+    --primary-foreground: 215 28% 8%;
+
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 82 26% 85%;
+
+    --muted: 215 25% 15%;
+    --muted-foreground: 30 8% 55%;
+
+    --accent: 76 39% 35%;
+    --accent-foreground: 82 26% 85%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 82 26% 85%;
+
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 45 93% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
