@@ -9,44 +9,37 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: t('projects.fintrack.title'),
-      description: t('projects.fintrack.description'),
-      icon: TrendingUp,
-      color: 'text-green-600',
-      bgColor: 'bg-green-100 dark:bg-green-900/20',
-      github: 'https://github.com/JaipreethTiruvaipati/fintrack',
+      title: t('projects.rubik.title'),
+      description: t('projects.rubik.description'),
+      icon: Brain,
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-100 dark:bg-purple-900/20',
+      github: 'https://github.com/JaipreethTiruvaipati',
       status: 'Completed',
-      tags: ['FastAPI', 'React', 'Prophet', 'Pandas'],
+      tags: ['C++', 'OpenCV', 'IDA*', 'Computer Vision'],
+      date: t('projects.rubik.date'),
     },
     {
-      title: t('projects.mumosa.title'),
-      description: t('projects.mumosa.description'),
-      icon: Brain,
+      title: t('projects.sqldb.title'),
+      description: t('projects.sqldb.description'),
+      icon: TrendingUp,
       color: 'text-blue-600',
       bgColor: 'bg-blue-100 dark:bg-blue-900/20',
-      github: 'https://github.com/JaipreethTiruvaipati/Mumosa',
-      status: 'In Progress',
-      tags: ['Go', 'React', 'LSTM', 'Google OR-Tools'],
+      github: 'https://github.com/JaipreethTiruvaipati',
+      status: 'Completed',
+      tags: ['Go', 'B-Tree', 'Database Internals', 'SQL'],
+      date: t('projects.sqldb.date'),
     },
     {
-      title: t('projects.finoptima.title'),
-      description: t('projects.finoptima.description'),
+      title: t('projects.redis.title'),
+      description: t('projects.redis.description'),
       icon: Zap,
-      color: 'text-yellow-600',
-      bgColor: 'bg-yellow-100 dark:bg-yellow-900/20',
-      github: 'https://github.com/JaipreethTiruvaipati/finoptima',
-      status: 'In Progress',
-      tags: ['Go', 'Kafka', 'PostgreSQL', 'XGBoost'],
-    },
-    {
-      title: t('projects.netguard.title'),
-      description: t('projects.netguard.description'),
-      icon: Shield,
-      color: 'text-red-600',
-      bgColor: 'bg-red-100 dark:bg-red-900/20',
-      github: 'https://github.com/JaipreethTiruvaipati/sentinet',
-      status: 'In Progress',
-      tags: ['Go', 'Python', 'Redis', 'Kafka'],
+      color: 'text-green-600',
+      bgColor: 'bg-green-100 dark:bg-green-900/20',
+      github: 'https://github.com/JaipreethTiruvaipati',
+      status: 'Completed',
+      tags: ['Go', 'Redis', 'TCP', 'RESP', 'Concurrency'],
+      date: t('projects.redis.date'),
     },
   ];
 
@@ -63,8 +56,8 @@ export const Projects = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="group hover:shadow-sacred transition-all duration-300 hover:-translate-y-2 bg-card border-border overflow-hidden"
               >
                 <CardHeader className="pb-4">
@@ -72,7 +65,7 @@ export const Projects = () => {
                     <div className={`p-3 rounded-lg ${project.bgColor}`}>
                       <project.icon className={`h-6 w-6 ${project.color}`} />
                     </div>
-                    <Badge 
+                    <Badge
                       variant={project.status === 'Completed' ? 'default' : 'secondary'}
                       className="text-xs"
                     >
@@ -87,7 +80,7 @@ export const Projects = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <Badge key={tag} variant="outline" className="text-xs">
@@ -95,7 +88,7 @@ export const Projects = () => {
                       </Badge>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-2 pt-2">
                     <Button
                       variant="outline"

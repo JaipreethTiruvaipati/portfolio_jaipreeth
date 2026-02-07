@@ -20,7 +20,7 @@ export const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image Side */}
             <div className="relative">
-              <div 
+              <div
                 className="rounded-2xl overflow-hidden shadow-sacred"
                 style={{
                   backgroundImage: `url(${forestCanopy})`,
@@ -31,11 +31,11 @@ export const About = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
               </div>
-              
+
               {/* Floating Stats */}
               <Card className="absolute -bottom-6 -right-6 bg-card/90 backdrop-blur-sm border border-border shadow-lg">
                 <CardContent className="p-6 text-center">
-                  <div className="text-2xl font-bold text-primary">9.36</div>
+                  <div className="text-2xl font-bold text-primary">9.43</div>
                   <div className="text-sm text-muted-foreground">CGPA</div>
                 </CardContent>
               </Card>

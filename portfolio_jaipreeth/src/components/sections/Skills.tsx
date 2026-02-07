@@ -13,42 +13,42 @@ export const Skills = () => {
       icon: Code,
       color: 'text-blue-600',
       bgColor: 'bg-blue-100 dark:bg-blue-900/20',
-      skills: ['C', 'C++', 'Python', 'Go (Golang)']
+      skills: ['C++ (STL)', 'Go (Golang)', 'Python', 'SQL', 'C']
     },
     {
-      title: t('skills.backend'),
+      title: t('skills.systems'),
       icon: Server,
       color: 'text-green-600',
       bgColor: 'bg-green-100 dark:bg-green-900/20',
-      skills: ['Go (HTTP routing, REST APIs)', 'Python (FastAPI)']
+      skills: ['Multi-threading', 'Concurrency (Goroutines)', 'Socket Programming', 'Database Internals (B-Trees, ACID)', 'Memory Management']
     },
     {
       title: t('skills.ml'),
       icon: Brain,
       color: 'text-purple-600',
       bgColor: 'bg-purple-100 dark:bg-purple-900/20',
-      skills: ['Scikit-learn', 'TensorFlow', 'Keras', 'Prophet', 'ARIMA', 'LSTM', 'XGBoost']
+      skills: ['Computer Vision (OpenCV)', 'Time Series (ARIMA, LSTM, Transformers)', 'Fuzzy Logic', 'XGBoost']
     },
     {
-      title: t('skills.databases'),
-      icon: Database,
+      title: t('skills.libraries'),
+      icon: Wrench,
       color: 'text-orange-600',
       bgColor: 'bg-orange-100 dark:bg-orange-900/20',
-      skills: ['PostgreSQL', 'MongoDB', 'Redis', 'Database Design', 'Query Optimization']
+      skills: ['Pandas', 'NumPy', 'Scikit-learn', 'Git/GitHub']
     },
     {
-      title: t('skills.tools'),
-      icon: Wrench,
+      title: t('skills.coursework'),
+      icon: Database,
       color: 'text-red-600',
       bgColor: 'bg-red-100 dark:bg-red-900/20',
-      skills: ['Docker', 'Kubernetes', 'Git', 'Kafka', 'AWS', 'CI/CD', 'MLFlow', 'DVC']
+      skills: ['Data Structures \u0026 Algorithms', 'Operating Systems', 'Computer Networks', 'DBMS', 'OOPS']
     },
   ];
 
   return (
     <section id="skills" className="py-20 relative">
       {/* Background Pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage: `url(${sacredGeometry})`,
@@ -56,7 +56,7 @@ export const Skills = () => {
           backgroundRepeat: 'repeat',
         }}
       />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -68,8 +68,8 @@ export const Skills = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="group hover:shadow-sacred transition-all duration-300 hover:-translate-y-1 bg-card border-border"
               >
                 <CardHeader className="pb-4">
@@ -85,9 +85,9 @@ export const Skills = () => {
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill) => (
-                      <Badge 
-                        key={skill} 
-                        variant="secondary" 
+                      <Badge
+                        key={skill}
+                        variant="secondary"
                         className="text-xs py-1 px-2 bg-muted hover:bg-primary hover:text-primary-foreground transition-colors duration-200 cursor-default"
                       >
                         {skill}
@@ -102,20 +102,20 @@ export const Skills = () => {
           {/* Achievements Section */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-gradient-peaceful rounded-lg">
-              <div className="text-3xl font-bold text-primary mb-2">1M+</div>
-              <div className="text-sm text-muted-foreground">Data Points Processed</div>
+              <div className="text-3xl font-bold text-primary mb-2">600+</div>
+              <div className="text-sm text-muted-foreground">CP Problems Solved</div>
             </div>
             <div className="text-center p-6 bg-gradient-peaceful rounded-lg">
-              <div className="text-3xl font-bold text-accent mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">ML Accuracy</div>
+              <div className="text-3xl font-bold text-accent mb-2">Top 9%</div>
+              <div className="text-sm text-muted-foreground">Meta Hacker Cup</div>
             </div>
             <div className="text-center p-6 bg-gradient-peaceful rounded-lg">
-              <div className="text-3xl font-bold text-primary mb-2">10k+</div>
-              <div className="text-sm text-muted-foreground">TPS Capability</div>
+              <div className="text-3xl font-bold text-primary mb-2">180k+</div>
+              <div className="text-sm text-muted-foreground">Records Processed</div>
             </div>
             <div className="text-center p-6 bg-gradient-peaceful rounded-lg">
-              <div className="text-3xl font-bold text-accent mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Stores Supported</div>
+              <div className="text-3xl font-bold text-accent mb-2">Rank 1</div>
+              <div className="text-sm text-muted-foreground">Batch Topper</div>
             </div>
           </div>
         </div>
